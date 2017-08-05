@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Based on Material Design guidelines
+        https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-specs
+    -->
+    <color name="colorListItemTitle">#242424</color>
+    <color name="colorListItemIcon">#737373</color>
+    <color name="colorListItemGroupTitle">#999999</color>
+    <color name="colorListItemSeparator">#dcdcdc</color>
+</resources>

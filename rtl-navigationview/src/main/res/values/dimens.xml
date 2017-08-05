@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_navigation_padding_top_default" tools:override="true">0dp</dimen>
+    <dimen name="design_navigation_padding_bottom" tools:override="true">0dp</dimen>
+
+    <!--
+        Based on Material Design guidelines
+        https://material.io/guidelines/patterns/navigation-drawer.html#navigation-drawer-specs
+    -->
+    <dimen name="list_item_icon_width">24dp</dimen>
+    <dimen name="list_item_icon_right_margin">16dp</dimen>
+    <dimen name="list_item_title_right_margin">72dp</dimen>
+    <dimen name="list_item_title_left_margin">16dp</dimen>
+    <dimen name="list_item_title_text_size">14sp</dimen>
+    <dimen name="list_item_separator_height">1dp</dimen>
+    <dimen name="list_item_group_title_right_margin">16dp</dimen>
+</resources>
