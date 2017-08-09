@@ -87,10 +87,12 @@ public class RtlNavigationView extends NavigationView {
                         .findViewById(R.id.list_item_rtl_navigationview_icon_imageview);
 
                 tvTitle.setText(currentRtlMenuItem.getTitle());
-                Drawable itemIcon = currentRtlMenuItem.getIcon();
-                itemIcon.setColorFilter(getResources().getColor(R.color.colorListItemIcon),
-                        PorterDuff.Mode.SRC_IN);
-                ivIcon.setImageDrawable(itemIcon);
+                if (currentRtlMenuItem.getIcon() != null) {
+                    Drawable itemIcon = currentRtlMenuItem.getIcon();
+                    itemIcon.setColorFilter(getResources().getColor(R.color.colorListItemIcon),
+                            PorterDuff.Mode.SRC_IN);
+                    ivIcon.setImageDrawable(itemIcon);
+                }
             }
         }
     }
