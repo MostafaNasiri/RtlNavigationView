@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.MenuRes;
 import android.support.annotation.Nullable;
 import android.support.design.internal.NavigationMenu;
 import android.support.design.widget.NavigationView;
@@ -23,9 +24,7 @@ public class RtlNavigationView extends NavigationView {
         TypedArray array = context.obtainStyledAttributes(attrs, new int[]{R.attr.rtl_menu});
         // Check if rtl_menu attribute has value
         if (array.getResourceId(0, -1) != -1) {
-            Menu menu = new NavigationMenu(context);
-            new SupportMenuInflater(context).inflate(array.getResourceId(0, -1), menu);
-            createRtlMenu(menu);
+            inflateRtlMenu(context, array.getResourceId(0, -1));
             array.recycle();
         }
     }
@@ -36,7 +35,21 @@ public class RtlNavigationView extends NavigationView {
         navigationItemSelectedListener = listener;
     }
 
+    /**
+     * Inflate a menu resource into this navigation view.
+     *
+     * <p>Existing items in the menu will be removed.</p>
+     *
+     * @param resId ID of a menu resource to inflate
+     */
+    public void inflateRtlMenu(Context context, @MenuRes int resId) {
+        Menu menu = new NavigationMenu(context);
+        new SupportMenuInflater(context).inflate(resId, menu);
+        createRtlMenu(menu);
+    }
+
     private void createRtlMenu(final Menu rtlMenu) {
+        getMenu().clear();
         for (int i = 0; i < rtlMenu.size(); i++) {
             // Add an empty MenuItem to the NavigationView for each of the items in the rtlMenu
             final MenuItem addedMenuItem = getMenu().add(null);
