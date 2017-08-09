@@ -43,13 +43,13 @@ public class RtlNavigationView extends NavigationView {
      * @param resId ID of a menu resource to inflate
      */
     public void inflateRtlMenu(Context context, @MenuRes int resId) {
+        getMenu().clear();
         Menu menu = new NavigationMenu(context);
         new SupportMenuInflater(context).inflate(resId, menu);
         createRtlMenu(menu);
     }
 
     private void createRtlMenu(final Menu rtlMenu) {
-        getMenu().clear();
         for (int i = 0; i < rtlMenu.size(); i++) {
             // Add an empty MenuItem to the NavigationView for each of the items in the rtlMenu
             final MenuItem addedMenuItem = getMenu().add(null);
