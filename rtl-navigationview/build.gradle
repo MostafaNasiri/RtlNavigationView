@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/nuuneoi/RtlNavigationView'
     gitUrl = 'https://github.com/nuuneoi/RtlNavigationView.git'
 
-    libraryVersion = '1.1'
+    libraryVersion = '1.2'
 
     developerId = 'mostafanasiri'
     developerName = 'Mostafa Nasiri'
@@ -31,8 +31,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
-        versionCode 2
-        versionName "1.1"
+        versionCode 3
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -50,7 +50,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:design:26.0.0-alpha1'
+    compile 'com.android.support:design:26.+'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
