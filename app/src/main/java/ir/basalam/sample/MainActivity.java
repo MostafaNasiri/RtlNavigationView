@@ -1,8 +1,7 @@
 package ir.basalam.sample;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.internal.NavigationMenuView;
-import android.support.design.internal.NavigationSubMenu;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -46,6 +45,9 @@ public class MainActivity extends AppCompatActivity
 
         RtlNavigationView rtlNavigationView = (RtlNavigationView) findViewById(R.id.nav_view);
         rtlNavigationView.setNavigationItemSelectedListener(this);
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/Sans.ttf");
+        rtlNavigationView.setTypeFace(typeface);
     }
 
     @Override
