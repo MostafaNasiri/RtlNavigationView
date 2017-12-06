@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 public class RtlNavigationView extends NavigationView {
     private OnNavigationItemSelectedListener navigationItemSelectedListener;
-    private Typeface mTypeFace = Typeface.DEFAULT;
+    private Typeface typeface = Typeface.DEFAULT;
     private Menu menu;
 
     public RtlNavigationView(Context context, AttributeSet attrs) {
@@ -71,7 +71,7 @@ public class RtlNavigationView extends NavigationView {
                         .findViewById(R.id.list_item_navigationview_group_title_textview);
                 tvGroupTitle.setText(currentRtlMenuItem.getTitle());
 
-                tvGroupTitle.setTypeface(mTypeFace);
+                tvGroupTitle.setTypeface(typeface);
 
                 createRtlMenu(currentRtlMenuItem.getSubMenu());
             } else {
@@ -93,7 +93,7 @@ public class RtlNavigationView extends NavigationView {
                 ImageView ivIcon = addedMenuItem.getActionView()
                         .findViewById(R.id.list_item_rtl_navigationview_icon_imageview);
 
-                tvTitle.setTypeface(mTypeFace);
+                tvTitle.setTypeface(typeface);
 
                 tvTitle.setText(currentRtlMenuItem.getTitle());
                 if (currentRtlMenuItem.getIcon() != null) {
@@ -106,14 +106,12 @@ public class RtlNavigationView extends NavigationView {
         }
     }
 
-
-
-    public Typeface getTypeFace() {
-        return mTypeFace;
+    public Typeface getTypeface() {
+        return typeface;
     }
 
-    public void setTypeFace(Typeface mTypeFace) {
-        this.mTypeFace = mTypeFace;
+    public void setTypeface(Typeface mTypeFace) {
+        this.typeface = mTypeFace;
         getMenu().clear();
         createRtlMenu(menu);
     }

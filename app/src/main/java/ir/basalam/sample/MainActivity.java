@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -43,11 +43,11 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        RtlNavigationView rtlNavigationView = (RtlNavigationView) findViewById(R.id.nav_view);
+        RtlNavigationView rtlNavigationView = findViewById(R.id.nav_view);
         rtlNavigationView.setNavigationItemSelectedListener(this);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(),"fonts/Sans.ttf");
-        rtlNavigationView.setTypeFace(typeface);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Sans.ttf");
+        rtlNavigationView.setTypeface(typeface);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(Gravity.RIGHT)) {
             drawer.closeDrawer(Gravity.RIGHT);
         } else {
@@ -92,8 +92,9 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText(this, "SEND", Toast.LENGTH_SHORT).show();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(Gravity.RIGHT);
+
         return true;
     }
 }

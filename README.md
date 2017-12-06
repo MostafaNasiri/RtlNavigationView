@@ -10,7 +10,7 @@
 <p>Add this line of code in your dependencies:</p>
 
 ```
-compile 'ir.basalam.rtlnavigationview:rtl-navigationview:1.2'
+compile 'ir.basalam.rtlnavigationview:rtl-navigationview:1.3'
 ```
 
 <p>Define your items in a menu resource file. For example I have a menu file called activity_main_drawer.xml:</p>
