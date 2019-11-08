@@ -1,4 +1,4 @@
-<h1>RtlNavigationView</h1>
+<h1>RtlNavigationView (This library is no longer maintained)</h1>
 
 <p align="center">
 <img src="https://github.com/MostafaNasiri/RtlNavigationView/blob/master/RtlNavigationView.png" />
